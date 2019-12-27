@@ -23,8 +23,8 @@ class PesertaController extends Controller
             $peserta = Peserta::create($request->all());
             // return \view('')
         } catch (\Throwable $th) {
-            
-            return view('admin.peserta.pendaftar-peserta')->withError();
+            \report($th);
+            return view('admin.peserta.pendaftar-peserta')->with(['error' => 'Ada Kesalahan Saat Memasukan Data']);
         }
     }
 }
