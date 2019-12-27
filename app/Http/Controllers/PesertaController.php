@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Peserta;
 use Session;
+Use Alert;
 
 class PesertaController extends Controller
 {
@@ -21,7 +22,11 @@ class PesertaController extends Controller
     {
         try {
             $peserta = Peserta::create($request->all());
-            // return \view('')
+            Session::flash('daftar_berhasil');
+            if (Session::has('daftar_berhasil')) {
+                Alert::success('Berhasil', 'Pendaftaran Berhasil Tunggu Konfirmasi Selanjutnya');
+                return view('admin.peserta.pendaftar-peserta')->with(['error' => 'Ada Kesalahan Saat Memasukan Data']);
+            }
         } catch (\Throwable $th) {
             \report($th);
             return view('admin.peserta.pendaftar-peserta')->with(['error' => 'Ada Kesalahan Saat Memasukan Data']);

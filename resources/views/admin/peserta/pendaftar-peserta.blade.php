@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="assets/css/components.css">
 
 <body class="layout-3">
+   @include('sweetalert::alert')
+
   <div id="app">
     <div class="main-wrapper container">
       <!-- Main Content -->
