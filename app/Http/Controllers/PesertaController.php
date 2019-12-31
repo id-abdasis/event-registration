@@ -32,4 +32,9 @@ class PesertaController extends Controller
             return view('admin.peserta.pendaftar-peserta')->with(['error' => 'Ada Kesalahan Saat Memasukan Data']);
         }
     }
+    public function detailPeserta($id)
+    {
+        $peserta = Peserta::find($id)->get();
+        return response()->json($peserta, 200);
+    }
 }

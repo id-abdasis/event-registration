@@ -17,6 +17,9 @@ class CreatePesertasTable extends Migration
             $table->bigIncrements('id');
             $table->string('nama_lengkap', 100);
             $table->string('alamat_lengkap', 250);
+            $table->string('jenis_kelamin', 20);
+            $table->string('tempat_lahir', 100);
+            $table->string('tanggal_lahir', 100);
             $table->string('nomor_telepon', 14);
             $table->string('asal_sekolah', 150);
             $table->string('program_tryout', 100);

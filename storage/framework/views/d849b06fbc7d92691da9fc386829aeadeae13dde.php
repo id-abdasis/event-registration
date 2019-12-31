@@ -64,6 +64,47 @@
                                     Sudah Benar
                                   </div>
                                 </div>
+                                
+                                <div class="form-group">
+                                  <label>Jenis Kelamin</label>
+                                  <select class="custom-select" required name="jenis_kelamin">
+                                      <option value="">Pilih Jenis Kelamin</option>
+                                      <option value="Laki-Laki">Laki-laki</option>
+                                      <option value="Perempuan">Perempuan</option>
+                                  </select>
+                                  <div class="invalid-feedback">
+                                      Harus Memilih Salah Satu Program Jenis Kelamin
+                                  </div>
+                                  <div class="valid-feedback">
+                                      Sudah Benar
+                                  </div>
+                                </div>
+
+                                <div class="form-row">
+                                  <div class="col-md-8">
+                                    <div class="form-group">
+                                      <label for="tempat_lahir">Tempat Lahir</label>
+                                      <input type="text" name="tempat_lahir" id="tempat_lahir" class="form-control">
+                                      <small class="form-text text-muted">Contoh: Bangkalan</small>
+                                      <div class="valid-feedback">
+                                        Sudah Benar
+                                    </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="col-md-4">
+                                    <div class="form-group">
+                                      <label>Tanggal Lahir</label>
+                                      <input type="date" class="form-control" name="tanggal_lahir"> 
+                                      <small class="text-form text-muted">Contoh: 17/11/1997</small>
+                                    </div>
+                                    
+                                  </div>
+                                </div>
+
+                                
+
+
                                 <div class="form-group">
                                   <label>Alamat Lengkap</label>
                                   <textarea name="alamat_lengkap" placeholder="Masukan alamat lengkap anda" required class="form-control" id="" cols="30" rows="10"></textarea>

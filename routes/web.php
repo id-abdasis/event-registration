@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'peserta'], function () {
     Route::get('daftar-peserta', 'PesertaController@daftarPeserta')->name('peserta.daftar-peserta');
+    Route::get('detail-peserta/{id}', 'PesertaController@detailPeserta')->name('peserta.detail-peserta');
 });
 
 Route::get('pendaftaran-peserta-festival', 'PesertaController@pendaftaranPeserta')->name('pendaftaran-peserta');

@@ -39,11 +39,12 @@
                         No
                       </th>
                       <th>Nama Lengkap</th>
+                      <th>Jenis Kelamin</th>
+                      <th>TTL</th>
                       <th>No HP</th>
                       <th>Asal Sekolah</th>
                       <th>Alamat Lengkap</th>
                       <th>Program Try Out</th>
-                      <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -53,11 +54,12 @@
                           {{ $key+1 }}
                         </td>
                         <td>{{ $peserta->nama_lengkap }}</td>
+                        <td>{{ $peserta->jenis_kelamin }}</td>
+                        <td>{{ $peserta->tempat_lahir }} , {{ $peserta->tanggal_lahir }}</td>
                         <td>{{ $peserta->nomor_telepon }}</td>
                         <td>{{ $peserta->asal_sekolah }}</td>
                         <td>{{ $peserta->alamat_lengkap }}</td>
                         <td><div class="badge badge-success">{{ $peserta->program_tryout }}</div></td>
-                        <td><a href="#" class="btn btn-outline-info btn-sm"> <i class="fa fa-pencil-alt"></i> Edit</a></td>
                       </tr>
                     @endforeach
                   </tbody>
@@ -76,14 +78,35 @@
 <script src="{{ url('/') }}/assets/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
 <script src="{{ url('/') }}/assets/modules/datatables/Select-1.2.4/js/dataTables.select.min.js"></script>
 <script src="{{ url('/') }}/assets/modules/jquery-ui/jquery-ui.min.js"></script>
+<script src="{{ asset('assets/modules/prism/prism.js') }}"></script>
+
 @endsection
 
 @section('page-js')
 <script src="{{ url('/') }}/assets/js/page/modules-datatables.js"></script>
+<script src="{{ asset('assets/js/page/bootstrap-modal.js') }}"></script>
+
+<script>
+  
+$('#btnDetail').click(function(event){
+  event.preventDefault();
+  alert($(this).attr('href'))
+  $.ajax({
+    url: 'https://himanurafestival.in/peserta/detail-peserta/1',
+    type: 'GET',
+    success: function (res) { 
+        console.log(res)
+    }
+  })
+});
+
+</script>
 @endsection
 
 @section('css-libraries')
 <link rel="stylesheet" href="{{ url('/') }}/assets/modules/datatables/datatables.min.css">
 <link rel="stylesheet" href="{{ url('/') }}/assets/modules/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
 <link rel="stylesheet" href="{{ url('/') }}/assets/modules/datatables/Select-1.2.4/css/select.bootstrap4.min.css">
+
+
 @endsection

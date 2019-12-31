@@ -2,8 +2,10 @@
 /public/storage
 /storage/*.key
 .env.backup
+/node_modules
 .phpunit.result.cache
 Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+.env
