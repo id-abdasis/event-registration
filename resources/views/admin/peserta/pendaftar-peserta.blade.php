@@ -87,7 +87,7 @@
                                   <div class="col-md-8">
                                     <div class="form-group">
                                       <label for="tempat_lahir">Tempat Lahir</label>
-                                      <input type="text" name="tempat_lahir" id="tempat_lahir" class="form-control">
+                                      <input type="text" placeholder="Masukan Tempat Lahir" name="tempat_lahir" id="tempat_lahir" class="form-control">
                                       <small class="form-text text-muted">Contoh: Bangkalan</small>
                                       <div class="valid-feedback">
                                         Sudah Benar
@@ -98,7 +98,7 @@
                                   <div class="col-md-4">
                                     <div class="form-group">
                                       <label>Tanggal Lahir</label>
-                                      <input type="date" class="form-control" name="tanggal_lahir"> 
+                                      <input placeholder="Pilih Tanggal Lahir" type="date" class="form-control" name="tanggal_lahir"> 
                                       <small class="text-form text-muted">Contoh: 17/11/1997</small>
                                     </div>
                                     
