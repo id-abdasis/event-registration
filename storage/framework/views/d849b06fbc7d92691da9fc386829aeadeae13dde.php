@@ -15,13 +15,24 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/components.css">
 
+  <style>
+    body{
+      background: url('assets/img/himanura.jpeg') no-repeat;
+      background-size: contain;
+      background-position: top center;
+    }
+
+  </style>
 <body class="layout-3">
    <?php echo $__env->make('sweetalert::alert', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
   <div id="app">
     <div class="main-wrapper container">
+     
       <!-- Main Content -->
+      <div class="banner"></div>
       <div class="main-content">
+        
         <section class="section" style="margin-top: -80px;">
           <div class="row justify-content-center">
                 <div class="col-md-9 col-sm-12">
