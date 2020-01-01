@@ -36,14 +36,6 @@
         <section class="section" style="margin-top: -80px;">
           <div class="row justify-content-center">
                 <div class="col-md-9 col-sm-12">
-                    <div class="alert alert-info alert-dismissible show fade">
-                        <div class="alert-body">
-                          <button class="close" data-dismiss="alert">
-                            <span>×</span>
-                          </button>
-                          Silahkan tanyakan di fitur chat yang tersedia di pojok kanan bawah apabila ada hal yang tidak di mengerti pada formulir pendaftaran
-                        </div>
-                      </div>
                       <?php if(Session::has('error')): ?>
                       <div class="alert alert-danger alert-dismissible show fade">
                         <div class="alert-body">
@@ -55,9 +47,9 @@
                       </div>
                       <?php endif; ?>
                     <div class="section-body">
-                        <h2 class="section-title">Formulir Pendaftaran Peserta Festifal <b>HIMANURA</b></h2>
-                        <p class="section-lead">Silahkan lengkapi formulir pendaftaran dibawah sesuai dengan data ril anda.</p>
-                        <div class="card">
+                        <h2 class="section-title text-dark">Formulir Pendaftaran Peserta Festifal <b>HIMANURA</b></h2>
+                        <p class="section-lead text-dark">Silahkan lengkapi formulir pendaftaran dibawah sesuai dengan data ril anda.</p>
+                        <div class="card" style="opacity: 97%;">
                             <form class="needs-validation" novalidate="" action="<?php echo e(route('store-pendaftaran-peserta')); ?>" method="POST">
                               <?php echo csrf_field(); ?>
                               <div class="card-header">
@@ -162,14 +154,21 @@
                                 </div>
                               </div>
                               <div class="card-footer text-right">
+                                
                                 <button class="btn btn-info">Daftar Sekarang</button>
                               </div>
                             </form>
                           </div>
+                          <a href="<?php echo e(route('dokumentasi-himanura')); ?>">
+                            <button class="btn btn-danger btn-block">Tonton Video Dokumentasi Himanura</button>
+                          </a>
                       </div>
                 </div>
+                
           </div>
+          
         </section>
+        
       </div>
       <footer class="main-footer">
         <div class="footer-left">

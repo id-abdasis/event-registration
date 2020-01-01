@@ -37,4 +37,9 @@ class PesertaController extends Controller
         $peserta = Peserta::find($id)->get();
         return response()->json($peserta, 200);
     }
+
+    public function dokumentasiHimanura()
+    {
+        return view('video-player');
+    }
 }

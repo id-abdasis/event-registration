@@ -22,6 +22,7 @@ Route::group(['prefix' => 'peserta'], function () {
 
 Route::get('pendaftaran-peserta-festival', 'PesertaController@pendaftaranPeserta')->name('pendaftaran-peserta');
 Route::post('pendaftaran-peserta-festival', 'PesertaController@StorePendaftaranPeserta')->name('store-pendaftaran-peserta');
+Route::get('dokumentasi-festival-himanura', 'PesertaController@dokumentasiHimanura')->name('dokumentasi-himanura');
 
 Auth::routes();
 
