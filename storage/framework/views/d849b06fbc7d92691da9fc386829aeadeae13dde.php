@@ -87,7 +87,7 @@
                                   <div class="col-md-8">
                                     <div class="form-group">
                                       <label for="tempat_lahir">Tempat Lahir</label>
-                                      <input type="text" placeholder="Tempat Lahir" name="tempat_lahir" id="tempat_lahir" class="form-control">
+                                      <input type="text" placeholder="Masukan Tempat Lahir" name="tempat_lahir" id="tempat_lahir" class="form-control">
                                       <small class="form-text text-muted">Contoh: Bangkalan</small>
                                       <div class="valid-feedback">
                                         Sudah Benar
