@@ -159,7 +159,7 @@
                               </div>
                             </form>
                           </div>
-                          <a href="{{ route('dokumentasi-himanura') }}">
+                          <a target="_blank" href="{{ route('dokumentasi-himanura') }}">
                             <button class="btn btn-danger btn-block">Tonton Video Dokumentasi Himanura</button>
                           </a>
                       </div>
