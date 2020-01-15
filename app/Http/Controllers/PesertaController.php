@@ -23,10 +23,10 @@ class PesertaController extends Controller
         $peserta = Peserta::create($request->all());
         if ($peserta) {
             Alert::success('Berhasil', 'Pendaftaran Berhasil Tunggu Konfirmasi Selanjutnya');
-            return redirect()->back();
+            return redirect()->route('pendaftaran-peserta');
         }else{
             Alert::error('Gagal', 'Ada Kesalahan Saat Pengisian Data');
-            return redirect()->back();
+            return redirect()->route('pendaftaran-peserta');
         }
     }
     public function detailPeserta($id)
