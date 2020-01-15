@@ -20,16 +20,13 @@ class PesertaController extends Controller
     }
     public function StorePendaftaranPeserta(Request $request)
     {
-        try {
-            $peserta = Peserta::create($request->all());
-            Session::flash('daftar_berhasil');
-            if (Session::has('daftar_berhasil')) {
-                Alert::success('Berhasil', 'Pendaftaran Berhasil Tunggu Konfirmasi Selanjutnya');
-                return view('admin.peserta.pendaftar-peserta')->with(['error' => 'Ada Kesalahan Saat Memasukan Data']);
-            }
-        } catch (\Throwable $th) {
-            \report($th);
-            return view('admin.peserta.pendaftar-peserta')->with(['error' => 'Ada Kesalahan Saat Memasukan Data']);
+        $peserta = Peserta::create($request->all());
+        if ($peserta) {
+            Alert::success('Berhasil', 'Pendaftaran Berhasil Tunggu Konfirmasi Selanjutnya');
+            return redirect()->back();
+        }else{
+            Alert::error('Gagal', 'Ada Kesalahan Saat Pengisian Data');
+            return redirect()->back();
         }
     }
     public function detailPeserta($id)
