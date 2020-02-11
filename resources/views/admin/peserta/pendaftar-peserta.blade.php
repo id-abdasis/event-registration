@@ -162,6 +162,9 @@
                           <a target="_blank" href="{{ route('dokumentasi-himanura') }}">
                             <button class="btn btn-danger btn-block">Tonton Video Dokumentasi Himanura</button>
                           </a>
+                          <a target="_blank" href="{{ asset('laporan/data-nilai-peserta.pdf') }}">
+                            <button class="btn btn-info mt-1 btn-block">Lihat Nilai</button>
+                          </a>
                       </div>
                 </div>
                 
